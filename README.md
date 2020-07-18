@@ -2,7 +2,7 @@
 This is template for Stekovaya.
 
 ## Usage
-```bash
+```
 $ make help
 Help v1.0
 Usage: make [args...]
