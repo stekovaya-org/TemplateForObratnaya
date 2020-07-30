@@ -20,7 +20,7 @@ cls:
 
 install:
 	@/bin/echo -e -n \\x1b[1mInstalling Stekovaya...\\x20\\x20\\x20
-	@wget https://repl.it/@theforarkld/Stekovaya.zip -q
+	@wget https://repl.it/@stekovaya/Stekovaya.zip -q
 	@unzip -q -o -d stekovaya Stekovaya.zip "stkvy.exe" "DOCS.md" "LICENSE" "_version"
 	@rm Stekovaya.zip
 	@/bin/echo -e done. \(v`cat stekovaya/_version`\)\\x1b[m
