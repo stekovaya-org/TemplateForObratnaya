@@ -15,24 +15,23 @@ endef
 all: install cls run
 
 cls:
-	$(call println,\\x1b[1mRunning Stekovaya...\\x1b[m)
+	$(call println,\\x1b[1mRunning Obratnaya...\\x1b[m)
 	@clear
 
 install:
-	@/bin/echo -e -n \\x1b[1mInstalling Stekovaya...\\x20\\x20\\x20
-	@wget https://repl.it/@stekovaya/Stekovaya.zip -q
-	@unzip -q -o -d stekovaya Stekovaya.zip "stkvy.exe" "DOCS.md" "LICENSE" "_version"
-	@rm Stekovaya.zip
-	@/bin/echo -e done. \(v`cat stekovaya/_version`\)\\x1b[m
-	@rm stekovaya/_version
+	@/bin/echo -e -n \\x1b[1mInstalling Obratnaya...\\x20\\x20\\x20
+	@wget https://repl.it/@obratnaya/Obratnaya.zip -q
+	@unzip -q -o -d obratnaya Obratnaya.zip "obrya.exe" "DOCS.md" "LICENSE"
+	@rm Obratnaya.zip
+	@/bin/echo -e done.
 
 run:
-	@mono stekovaya/stkvy.exe main.stk
+	@mono obratnaya/obrya.exe main.oba
 	
 license:
-	@if [ ! -e stekovaya/LICENSE ] ; then make install ; fi
+	@if [ ! -e obratnaya/LICENSE ] ; then make install ; fi
 ifeq ($(OPT),legalcode)
-	@cat stekovaya/LICENSE
+	@cat obratnaya/LICENSE
 else
 ifeq ($(OPT),name)
 	@echo CC-BY-ND 4.0
@@ -43,7 +42,7 @@ endif
 endif
 
 clean:
-	@rm -r stekovaya
+	@rm -r obratnaya
 	
 help:
 	$(call unicode,1B)
@@ -51,9 +50,9 @@ help:
 	$(call unicode,1B[m)
 	$(call println,Usage: make [args...])
 	$(call println,args:)
-	$(call println,\\x09No args: Install Stekovaya and run Stekovaya.)
-	$(call println,\\x09install: Install Stekovaya.)
-	$(call println,\\x09run    : Run Stekovaya.)
+	$(call println,\\x09No args: Install Obratnaya and run Obratnaya.)
+	$(call println,\\x09install: Install Obratnaya.)
+	$(call println,\\x09run    : Run Obratnaya.)
 	$(call println,\\x09license: Display about license info.)
 	$(call println,\\x09         Need OPT=legalcode/name)
-	$(call println,\\x09clean  : Uninstall Stekovaya.)
+	$(call println,\\x09clean  : Uninstall Obratnaya.)
