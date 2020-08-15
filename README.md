@@ -1,5 +1,5 @@
 # Template
-This is template for Stekovaya.
+This is template for Obratnaya.
 
 ## Usage
 ```
@@ -7,12 +7,12 @@ $ make help
 Help v1.0
 Usage: make [args...]
 args:
-	No args: Install Stekovaya and run Stekovaya.
-	install: Install Stekovaya.
-	run    : Run Stekovaya.
+	No args: Install Obratnaya and run Obratnaya.
+	install: Install Obratnaya.
+	run    : Run Obratnaya.
 	license: Display about license info.
 	         Need OPT=legalcode/name
-	clean  : Uninstall Stekovaya.
+	clean  : Uninstall Obratnaya.
 ```
 
 ## License
