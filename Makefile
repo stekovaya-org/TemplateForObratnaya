@@ -21,7 +21,7 @@ cls:
 install:
 	@/bin/echo -e -n \\x1b[1mInstalling Obratnaya...\\x20\\x20\\x20
 	@wget https://repl.it/@obratnaya/Obratnaya.zip -q
-	@unzip -q -o -d obratnaya Obratnaya.zip "obrya.exe" "DOCS.md" "LICENSE"
+	@unzip -q -o -d obratnaya Obratnaya.zip "lib/*" "obrya.exe" "DOCS.md" "LICENSE"
 	@rm Obratnaya.zip
 	@/bin/echo -e done.
 
